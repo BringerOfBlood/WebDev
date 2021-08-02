@@ -6,10 +6,7 @@ function setup() {
   let boundary = new Rectangle(200, 200, 200, 200);
   qtree = new QuadTree(boundary, 4);
 
-  // for (var i = 0; i < 500; i++) {body {
-            background-color: black;
-            color: white;
-        }
+  // for (var i = 0; i < 500; i++) {
   //   let p = new Point(random(width),random(height));
   //   qt.insert(p);
   // }
