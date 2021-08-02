@@ -1,7 +1,7 @@
 let qtree;
 
 function setup() {
-  createCanvas(400, 400);= new QuadTree(boundary, 4);
+  createCanvas(400, 400);
 
   let boundary = new Rectangle(200, 200, 200, 200);
   qtree = new QuadTree(boundary, 4);
@@ -20,7 +20,7 @@ function draw() {
       let m = new Point(mouseX + random(-5, 5), mouseY + random(-5, 5));
       qtree.insert(m);
     }
-    console.log('test')
+    //console.log('test')
   }
 
   background(0);
