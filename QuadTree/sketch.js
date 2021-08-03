@@ -6,7 +6,7 @@ function setup() {
   let boundary = new Rectangle(200, 200, 200, 200);
   qtree = new QuadTree(boundary, 4);
   
-  for (var i = 0; i < 3000; i++) {
+  for (var i = 0; i < 300; i++) {
     let x = randomGaussian(width / 2, width / 8);
     let y = randomGaussian(height / 2, height / 8);
     let m = new Point(x, y);
@@ -17,19 +17,10 @@ function setup() {
   //   let p = new Point(random(width),random(height));
   //   qt.insert(p);
   // }
-  qtree.show();
+  // qtree.show();
   
   
-  stroke(0, 255, 0);
-  rectMode(CENTER);
-  let range = new Rectangle(random(width), random(height), 50, 50);
-  rect(range.x, range.y, range.w*2 , range.h*2 );
   
-  let points = []; 
-  qtree.query(range, points);
-  for (let p of points) {
-    point(p.x, p.y)
-  }
 }
 
 function draw() {
@@ -39,8 +30,19 @@ function draw() {
       console.log('.')
       qtree.insert(m);
     }
-  }
+  }*/
 
   background(0);
-  qtree.show();*/
+  qtree.show();
+
+  stroke(0, 255, 0);
+  rectMode(CENTER);
+  let range = new Rectangle(mouseX, mouseY, 30, 30);
+  rect(range.x, range.y, range.w*2 , range.h*2 );
+  
+  let points = []; 
+  qtree.query(range, points);
+  for (let p of points) {
+    point(p.x, p.y)
+  }
 }
